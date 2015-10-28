@@ -1,0 +1,71 @@
+\documentclass[10pt,usenames,dvipsnames,svgnames,table]{beamer}
+\usetheme{Warsaw}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\graphicspath{ {./images/} }
+\allowdisplaybreaks
+\usepackage{tikz}
+\setbeamertemplate{bibliography item}[text] %remove the icon
+\setbeamertemplate{frametitle continuation}{}
+
+\title[{Optimal Location of Car Wreck Adjusters}]{Optimal Location of Car Wreck Adjusters}
+\subtitle{DOS Team}
+\author[Luis Maltos, Roger R\'ios, Angelica Salazar, M. Gpe. Villarreal]{
+  L. A. Maltos-Ortega \inst{1},
+  R. Z. R\'ios-Mercado \inst{1},
+  M. A. Salazar-Aguilar \inst{1}
+  \and M. G. Villareal Marroquin \inst{2}}
+
+\institute[PISIS]{
+  \inst{1} Graduate Program in Systems Engineering \\
+  FIME / UANL \and
+  \inst{2} CIMAT Unidad Monterrey
+}
+
+\date[Oct 2015]{October 2015}
+
+\logo{
+  \makebox[0.95\paperwidht]{
+    \hspace{-60pt}
+    \includegraphics[width=1.5cm,keepaspectratio]{pisis_logo}
+  }
+}
+
+\AtBeginSubsection{
+  \frame{\frametitle{Table of Contents}
+    \tableofcontents[currentsubsection]}
+}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Contents}
+  \tableofcontents
+\end{frame}
+
+%%% Introduction %%%
+\include{Introduction}
+\include{Jarvis}
+\include{Methods}
+
+%%% Future Work %%
+\include{FutureWork}
+\include{Tanks}
+
+%%% References %%%
+\subsection{References}
+\begin{frame}[allowframebreaks]
+  %\setbeamertemplate{bibliography item}{\insertbiblabel}
+  \frametitle{References}
+  {\scriptsize
+    \bibliographystyle{abbrv}
+    \bibliography{references}
+  }
+\end{frame}
+\end{document}
