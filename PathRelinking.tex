@@ -1,13 +1,21 @@
-\section{Path Relinking}
-\begin{frame}{Path Relinking Algorithm}{}
-  \textit{Given:}
-  List of elite solutions \\
-  \textit{Initialize:} \\
-  X = fisrt elite solution \hfill
-  
-  \textit{Iteration:}
-  match = MatchingFunction(X,Y)\\
-  order = ProcessingOrderFunction(X,pm,Y)\\
-  if X->server(i)->location != Y->server(pm[i])->location
-  X->server(i)->location = Y->server(pm[i])->location
+\subsection{Path Relinking}
+\begin{frame}{}{}
+  \begin{algorithm}[H]
+    \caption{Path Relinking Algorithm}
+    \label{algPR}
+    \begin{algorithmic}
+      \State \textbf{Input:} $X,Y$ SQpMSols
+      \State PathRelinkingSols = EmptyList()
+      \State match = MatchingFunction(X,Y)
+      \State order = ProcessingOrderFunction(X,pm,Y)
+      \For {$i=0$ \To $p$}
+      \If{X.location[order[i]] != Y.location[match[order[i]]]}
+      \State Z = X.clone()
+      \State Z.location[order[i]] = Y.location[match[order[i]]]
+      \State PathRelinkingSols.insert(Z)
+      \State X = Z
+      \EndIf
+      \EndFor
+    \end{algorithmic}
+  \end{algorithm}
 \end{frame}
