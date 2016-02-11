@@ -1,21 +1,16 @@
-\subsection{Path Relinking}
-\begin{frame}{}{}
-  \begin{algorithm}[H]
-    \caption{Path Relinking Algorithm}
-    \label{algPR}
-    \begin{algorithmic}
-      \State \textbf{Input:} $X,Y$ SQpMSols
-      \State PathRelinkingSols = EmptyList()
-      \State match = MatchingFunction(X,Y)
-      \State order = ProcessingOrderFunction(X,pm,Y)
-      \For {$i=0$ \To $p$}
-      \If{X.location[order[i]] != Y.location[match[order[i]]]}
-      \State Z = X.clone()
-      \State Z.location[order[i]] = Y.location[match[order[i]]]
-      \State PathRelinkingSols.insert(Z)
-      \State X = Z
-      \EndIf
-      \EndFor
-    \end{algorithmic}
-  \end{algorithm}
+\section{Path Relinking}
+
+\subsection{Outline}
+\begin{frame}[allowframebreaks]{Path Relinking Outline}{}
+  \input{PathRelinking_Outline}
+\end{frame}
+
+\subsection{Template}
+\begin{frame}[allowframebreaks]{Path Relinking Template}{}
+  \input{PathRelinking_Template}
+\end{frame}
+
+\subsection{Algorithm}
+\begin{frame}[allowframebreaks]{Path Relinking Algorithm}{}
+  \footnotesize{\input{PathRelinking_Algorithm}}
 \end{frame}
