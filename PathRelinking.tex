@@ -14,3 +14,16 @@
 \begin{frame}[allowframebreaks]{Path Relinking Algorithm}{}
   \footnotesize{\input{PathRelinking/Algorithm}}
 \end{frame}
+
+\newcounter{iteration}
+\forloop{iteration}{1}{\value < 5} {
+    \frame{
+    \begin{figure}[h!]
+      \begin{center}
+        \includegraphics[scale=0.45]{PR_step_0\arabic{iteration}}
+        \caption{m = n = 30, p = 5, iteration = \arabic{iteration}} 
+      \end{center}
+    \end{figure}
+  }
+
+}
