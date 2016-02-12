@@ -15,13 +15,16 @@
   \footnotesize{\input{PathRelinking/Algorithm}}
 \end{frame}
 
-\newcounter{iteration}
-\forloop{iteration}{1}{\value < 5} {
-    \frame{
+\newcounter{it}
+\forloop{it}{1}{\value{it} < 5} {
+  \frame{
+    \frametitle{Path Relinking \arabic{it}}
+    In the iteration \arabic{it} we obtain:
     \begin{figure}[h!]
       \begin{center}
-        \includegraphics[scale=0.45]{PR_step_0\arabic{iteration}}
-        \caption{m = n = 30, p = 5, iteration = \arabic{iteration}} 
+        \def\svgwidth{\columwidth}
+        %\includesvg{images/PR_step_0\arabic{it}}
+        \caption{m = n = 30, p = 5, it = \arabic{it}} 
       \end{center}
     \end{figure}
   }
